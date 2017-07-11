@@ -1,4 +1,4 @@
-var images = ['images/kitchen.jpg','images/cloth.jpg','images/cushions.jpg'];
+var images = ['images/kitchen.jpg','images/bedkids.jpg','images/cushions.jpg'];
 
 window.onload ;
 var num = 0;

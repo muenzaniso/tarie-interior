@@ -10,14 +10,12 @@ body {
 	color: green;
 }
 
-#thesearch {background: url(images/search-icon.png) no-repeat #fff right ;
+#thesearch {background: url(search.png) no-repeat #fff right ;
     back
 }
 #maincushion {
-   width: 90%;
-   max-height: 500px;
-   margin-left: 60px;
-   margin-right: 60px;
+   width: 100%;
+   height: 70%;
 
 }
 
@@ -34,25 +32,14 @@ body {
 	font-size: 18px;
 	background-color: rgb(79, 97, 124);
 }
-
-/*#pic1 {
-	padding-top: 15px;
-	margin-left: 15px;
-	height: 300px;
-	width: 300px;
+#news a {
+	color: yellow; 
 }
+#news a:hover {
+	color: #fff;
 
 
-#pic3 {
-	padding-top: 15px;
-    margin-left: 35px;
-	height: 300px;
-	width: 300px;
 }
-
-#pic2 {
-	padding-top:8px ;
-}*/
 
 #firstrowimages {
 	background-color: grey; 

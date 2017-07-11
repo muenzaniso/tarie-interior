@@ -1,4 +1,12 @@
-<!DOCTYPE html>
+<?php
+ require 'connect.php';
+ $sql = "SELECT * FROM products";
+  $result = mysqli_query($con, $sql);
+  ?>
+
+ <!DOCTYPE html>
+
+
 <html>
 <head>
 <meta charset="utf-8">
@@ -47,18 +55,21 @@
 									<th>Product name</th>
 									<th>QUANTITY</th>
 									<th>Price</th>
-									<th>Total</th>
-									<th>Remove</th>
+									<th>Buy</th>
+								
 								</tr>
 							</thead>
 							<tbody>
+							 <?php 
+                              
+							  while($product = mysqli_fetch_object($result)) {?>
 								<tr >
-									<td>1</td>
+									<td><?php echo $product->ID ?></td>
 									<td>
-										<a href=""><img alt="" class="img-responsive" src="images/orange.jpg"></a>
+										<a href=""><img alt="" class="img-responsive" src="images/orange.jpg"><img src=<?php ?></a>
 									</td>
 									<td>
-										<h6><a href="#">Orange cushion</a></h6>
+										<h6><a href="#"><?php echo $product->product_name ?></h6>
 									</td>
 									<td>
 										<form id="qua_in" action="action_page.php">
@@ -66,13 +77,15 @@
 										</form>
 									</td>
 									<td>
-										<div class="cart-price">$104.99</div>
+										<div class="cart-price"><?php echo $product->price ?></div>
 									</td>
 									<td>
-										<div class="cart-subtotal">$104.99</div>
+										<div class="cart-subtotal"> <a href="cart.php?id <?php echo $product->ID;  ?>">Order Now<a/></div>
 									</td>
-									<td><i class="fa fa-trash"></i></td>
+									<td></td>
 								</tr>
+								
+								<?php } ?>
 								<tr>
 									<td>2</td>
 									<td>
